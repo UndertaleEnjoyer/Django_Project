@@ -1,0 +1,9 @@
+{% extends 'base_layout.html' %}
+{% block title %}Welcome to MySite{% endblock title %}
+{% block content %}
+<div class="hero">
+    <h1>{{ header }}</h1>
+    <p>{{ message }}</p>
+    <a href="{% url 'about' %}" class="cta-button">Learn More</a>
+</div>
+{% endblock content %}

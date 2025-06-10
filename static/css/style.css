@@ -1,0 +1,399 @@
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    background-color: #f4f7fa;
+    color: #333;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Header Styles */
+.site-header {
+    background-color: #1a2b3c;
+    padding: 1rem 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.site-header .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1.5rem;
+}
+
+.logo a {
+    font-size: 1.8rem;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.navbar ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.navbar ul li a:hover {
+    color: #00c4b4;
+}
+
+/* General Content Container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem;
+}
+
+/* Headings */
+h1, h2, h3 {
+    color: #1a2b3c;
+    margin-bottom: 1rem;
+}
+
+h1 {
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+h2 {
+    font-size: 1.8rem;
+}
+
+/* Form Styles (Login and Signup) */
+.form {
+    max-width: 400px;
+    margin: 2rem auto;
+    background: #ffffff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: #1a2b3c;
+}
+
+.form input {
+    width: 100%;
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.form button {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: #00c4b4;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.form button:hover {
+    background-color: #009b8d;
+}
+
+/* Article List Styles */
+.articles {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.article__item {
+    background: #ffffff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+}
+
+.article__item:hover {
+    transform: translateY(-5px);
+}
+
+.article__item h2 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.article__item a {
+    text-decoration: none;
+    color: #00c4b4;
+}
+
+.article__item a:hover {
+    text-decoration: underline;
+}
+
+.article__item p {
+    color: #555;
+    margin-bottom: 1rem;
+}
+
+.article__item time {
+    font-size: 0.9rem;
+    color: #888;
+}
+
+/* Article Detail Styles */
+.article-detail {
+    max-width: 800px;
+    margin: 2rem auto;
+    background: #ffffff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.article-detail h1 {
+    font-size: 2rem;
+    text-align: left;
+}
+
+.article-detail p {
+    margin: 1rem 0;
+    text-align: justify;
+}
+
+.article-detail time {
+    font-size: 0.9rem;
+    color: #888;
+}
+
+.article-detail img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin: 1rem 0;
+}
+
+/* Home Page Hero Section */
+.hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://source.unsplash.com/random/1200x400/?blog');
+    background-size: cover;
+    background-position: center;
+    color: #ffffff;
+    text-align: center;
+    padding: 6rem 1.5rem;
+    border-radius: 8px;
+    margin: 2rem auto;
+    max-width: 1200px;
+    position: relative;
+    overflow: hidden;
+    animation: heroFadeIn 1s ease-in-out;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    color: #ffffff;
+    margin-bottom: 1.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.hero p {
+    font-size: 1.4rem;
+    max-width: 700px;
+    margin: 0 auto 2rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.hero .cta-button {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background-color: #00c4b4;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 500;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.hero .cta-button:hover {
+    background-color: #009b8d;
+    transform: scale(1.05);
+}
+
+/* About Page */
+.about-content {
+    max-width: 800px;
+    margin: 2rem auto;
+    background: #ffffff;
+    padding: 2.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.about-content:hover {
+    transform: translateY(-5px);
+}
+
+.about-content h1 {
+    font-size: 2.8rem;
+    text-align: left;
+    margin-bottom: 1.5rem;
+    border-bottom: 2px solid #00c4b4;
+    padding-bottom: 0.5rem;
+}
+
+.about-content p {
+    font-size: 1.1rem;
+    margin-bottom: 1.2rem;
+    color: #444;
+}
+
+.about-content strong {
+    color: #1a2b3c;
+    font-weight: 500;
+}
+
+/* Footer */
+footer {
+    background-color: #1a2b3c;
+    color: #ffffff;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 2rem;
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+/* Animation Keyframes */
+@keyframes heroFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .site-header .container {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .navbar ul {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero {
+        padding: 4rem 1.5rem;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+
+        padding: 3rem 1rem;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .about-content {
+        padding: 1.5rem;
+    }
+
+    .form {
+        padding: 1.5rem;
+    }
+
+    .article__item {
+        padding: 1rem;
+    }
+}
+
+/* General Button Styles */
+.btn {
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+}
+
+/* Logout Button */
+.btn--logout {
+    background-color: #00c4b4;
+    color: #ffffff;
+}
+
+.btn--logout:hover {
+    background-color: #009b8d;
+    transform: scale(1.05);
+}
+
+/* Create Article Button */
+.btn--create {
+    background-color: #4caf50; /* Зеленый цвет для создания статьи */
+    color: #ffffff;
+    margin-bottom: 2rem;
+}
+
+.btn--create:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+}
+
+/* Style for Create Article Link (if used as a link) */
+.btn--create a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.btn--create:hover a {
+    color: #ffffff;
+}
