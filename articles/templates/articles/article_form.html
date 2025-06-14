@@ -1,14 +1,14 @@
-{% extends "base_layout.html" %}
-
+{% extends 'base_layout.html' %}
 {% load static %}
 
-{% block title %}Create article{% endblock title %}
+{% block title %}Create or update article{% endblock title %}
 
 {% block content %}
-    <h1>Create article</h1>
-    <form class="form" action="{% url 'articles:article_create' %}" method="post" enctype="multipart/form-data">
+    <h1>Create or update article</h1>
+
+    <form class="form" method="post" enctype="multipart/form-data">
         {% csrf_token %}
         {{ form }}
-        <button type="submit" >Create article</button>
+        <button type="submit" class="btn btn-primary">Save</button>
     </form>
 {% endblock content %}
